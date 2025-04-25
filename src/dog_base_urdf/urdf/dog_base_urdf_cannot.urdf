@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_arm_urdf">
+
+  <link name="world"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.645"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00463530894606606 0.00802870790552011 -0.0799989611684098"
+        rpy="0 0 0" />
+      <mass
+        value="28.639637162729" />
+      <inertia
+        ixx="1.02069493877252"
+        ixy="-0.492377946135701"
+        ixz="-0.00403480306156974"
+        iyy="0.452144725500823"
+        iyz="-0.00698871110543418"
+        izz="1.31772255712572" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link
+    name="Link 1">
+    <inertial>
+      <origin
+        xyz="0.00693529911192451 -0.0968008731543303 -0.0116079401346998"
+        rpy="0 0 0" />
+      <mass
+        value="1.40763156431571" />
+      <inertia
+        ixx="0.00381378325949543"
+        ixy="0.00036502460765105"
+        ixz="0.000179532988104023"
+        iyy="0.00434025844622671"
+        iyz="-0.00061097170653452"
+        izz="0.00362056432496068" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.00499999999999989"
+      rpy="-1.5707963267949 0 1.03225378729628" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link 1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="300"
+      velocity="6" />
+  </joint>
+  <link
+    name="Link 2">
+    <inertial>
+      <origin
+        xyz="-0.150029751441806 0.0896948617433049 -0.186673336742885"
+        rpy="0 0 0" />
+      <mass
+        value="3.3150572676576" />
+      <inertia
+        ixx="0.011311210182033"
+        ixy="-0.000591961119606351"
+        ixz="-0.000116312948423849"
+        iyy="0.0106745097850616"
+        iyz="6.87285447005491E-05"
+        izz="0.00624130904651367" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 -0.135 0"
+      rpy="-2.71599956230961 -1.57079631189374 1.99638941807508" />
+    <parent
+      link="Link 1" />
+    <child
+      link="Link 2" />
+    <axis
+      xyz="0.858457103030291 -0.512885369509446 0" />
+    <limit
+      lower="-1.571"
+      upper="1.571"
+      effort="300"
+      velocity="6" />
+  </joint>
+  <link
+    name="Link 3">
+    <inertial>
+      <origin
+        xyz="-0.033689536408642 0.0563674540836177 0.33235240342203"
+        rpy="0 0 0" />
+      <mass
+        value="1.58685687935599" />
+      <inertia
+        ixx="0.00693436924984748"
+        ixy="-0.000192873769015718"
+        ixz="-3.41134757974382E-06"
+        iyy="0.00714207093389545"
+        iyz="4.74695181011071E-06"
+        izz="0.00243782307446069" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.444"
+      rpy="3.14159265358979 0 -1.57079632679489" />
+    <parent
+      link="Link 2" />
+    <child
+      link="Link 3" />
+    <axis
+      xyz="0.512885369509465 -0.858457103030279 0" />
+    <limit
+      lower="-2.356"
+      upper="2.356"
+      effort="300"
+      velocity="6" />
+  </joint>
+  <link
+    name="Link 4">
+    <inertial>
+      <origin
+        xyz="-0.105489040678588 -0.0478569058317946 -0.257451351897279"
+        rpy="0 0 0" />
+      <mass
+        value="0.884734788638594" />
+      <inertia
+        ixx="0.00191243090889954"
+        ixy="-0.000198122617561153"
+        ixz="-0.000120001423381376"
+        iyy="0.00155855865050904"
+        iyz="-0.000331659424403815"
+        izz="0.00178526070697811" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 -0.0807901393343303 0.518000000000001"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Link 3" />
+    <child
+      link="Link 4" />
+    <axis
+      xyz="-0.512885369509445 0 -0.858457103030291" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="300"
+      velocity="6" />
+  </joint>
+  <link
+    name="Link 5">
+    <inertial>
+      <origin
+        xyz="-0.380771403610955 -0.145304543439048 -0.0634725691412049"
+        rpy="0 0 0" />
+      <mass
+        value="0.911162548469119" />
+      <inertia
+        ixx="0.00108727490605038"
+        ixy="-4.42163542965196E-05"
+        ixz="7.98193387484618E-05"
+        iyy="0.00113491366739802"
+        iyz="-0.000132527480166507"
+        izz="0.000949609250555761" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 -0.12 0.13521"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="Link 4" />
+    <child
+      link="Link 5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="300"
+      velocity="6" />
+  </joint>
+  <link
+    name="Link 6">
+    <!-- this is for closed claw, the other one is for open claw -->
+    
+    <!-- <inertial>
+      <origin
+        xyz="-0.00118020585558504 -0.0159149719261033 -0.00342180205165366"
+        rpy="0 0 0" />
+      <mass
+        value="0.0733987958077739" />
+      <inertia
+        ixx="1.1380006467328E-05"
+        ixy="9.25558899499417E-07"
+        ixz="1.10405515931789E-06"
+        iyy="1.57214863593949E-05"
+        iyz="-4.47111004898457E-08"
+        izz="1.46442413687236E-05" />
+    </inertial>  -->
+    <inertial>
+      <origin
+        xyz="0.327062358137029 0.420025700116675 -0.127549548657267"
+        rpy="0 0 0" />
+      <mass
+        value="0.0733981065412194" />
+      <inertia
+        ixx="1.12778782885842E-05"
+        ixy="-1.67990996390312E-07"
+        ixz="-1.53467681919776E-06"
+        iyy="1.59105887617276E-05"
+        iyz="7.09296648946757E-07"
+        izz="1.45570758923969E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://dog_base_urdf/meshes/Link 6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <!-- these are for closed claw, the other one is for open claw  -->
+    
+    <!-- <origin
+      xyz="0 0.180208975073821 -0.07"
+      rpy="-0.372282107337962 -0.687462882680538 -2.83257743809968" />
+    <parent
+      link="Link 5" />
+    <child
+      link="Link 6" />
+    <axis
+      xyz="-0.235042225926605 -0.957575831382436 -0.16674435277905" />
+     -->
+    <origin
+      xyz="0 0.18021 -0.07"
+      rpy="-0.37228 -0.68746 -2.8326" />
+    <parent
+      link="Link 5" />
+    <child
+      link="Link 6" />
+    <axis
+      xyz="-0.17584 0.85455 0.48869" />
+    
+    <limit
+      lower="-3.142"
+      upper="3.142"
+      effort="300"
+      velocity="6" /> 
+    
+  </joint>
+
+  <transmission name="link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_1_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_2_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_3_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_4_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_5_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="link_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_6_motor">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="Link 1">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="Link 2">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="Link 3">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="Link 4">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="Link 5">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+  <gazebo reference="Link 6">
+	  <selfCollide>true</selfCollide>
+  </gazebo>
+
+</robot>

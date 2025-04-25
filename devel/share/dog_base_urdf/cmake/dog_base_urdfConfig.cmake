@@ -1,0 +1,1 @@
+/home/clauclauclau/moveit_ws/devel/.private/dog_base_urdf/share/dog_base_urdf/cmake/dog_base_urdfConfig.cmake

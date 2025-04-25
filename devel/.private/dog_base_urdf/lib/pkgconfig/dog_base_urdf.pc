@@ -1,0 +1,8 @@
+prefix=/home/clauclauclau/moveit_ws/devel/.private/dog_base_urdf
+
+Name: dog_base_urdf
+Description: Description of dog_base_urdf
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs roscpp rospy std_msgs
