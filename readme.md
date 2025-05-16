@@ -57,32 +57,6 @@ This will:
 - Launch MoveIt's move_group node
 - Open Rviz with a preconfigured setup
 
-### Running the demo scripts
-
-The repository includes several demo scripts:
-
-#### 1. Object manipulation in Rviz
-
-```bash
-rosrun moveit_robot_arm_sim node_add_attach_detach_objects_in_Rviz.py
-```
-This interactive script allows you to:
-- Add cylinders of different sizes at various positions
-- Attach objects to the robot's end effector
-- Detach objects from the robot
-- Remove objects from the scene
-
-Follow the prompt instructions to perform different operations.
-
-#### 2. Object manipulation in Gazebo
-
-```bash
-rosrun moveit_robot_arm_sim node_attach_detach_objects_in_Gazebo.py
-```
-This script enables physical object interaction in the Gazebo simulation:
-- Attach objects to the robot's gripper
-- Detach objects from the gripper
-
 ## Acknowledgments
 
 This project builds on various ROS and MoveIt tutorials, with thanks to the ROS and MoveIt communities.
